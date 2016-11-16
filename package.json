@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jest"
+  },
+  "jest": {
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/maximderbin/problems/issues"
   },
-  "homepage": "https://github.com/maximderbin/problems#readme"
+  "homepage": "https://github.com/maximderbin/problems#readme",
+  "devDependencies": {
+    "jest": "^17.0.2"
+  }
 }
