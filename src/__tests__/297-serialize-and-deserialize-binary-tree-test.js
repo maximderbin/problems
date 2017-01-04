@@ -1,9 +1,9 @@
 var TreeNode = require('../utils/TreeNode');
-var serializeAndDeserializeBinaryTree = require('../serialize_and_deserialize_binary_tree');
-var serialize = serializeAndDeserializeBinaryTree.serialize;
-var deserialize = serializeAndDeserializeBinaryTree.deserialize;
+var problem = require('../297-serialize-and-deserialize-binary-tree');
+var serialize = problem.serialize;
+var deserialize = problem.deserialize;
 
-describe('serialize and deserialize binary tree', function() {
+describe('297-serialize-and-deserialize-binary-tree', function() {
   it('serializes binary tree', function() {
     describe('when TreeNode passed as argument', function() {
       /**
