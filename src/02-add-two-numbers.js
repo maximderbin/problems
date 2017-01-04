@@ -27,10 +27,10 @@
 var ListNode = require('./utils/ListNode');
 
 module.exports = function(l1, l2) {
-  let sum = 0;
-  let modulo = 0;
-  let current = new ListNode();
-  const head = current;
+  var sum = 0;
+  var modulo = 0;
+  var current = new ListNode();
+  var head = current;
 
   while (l1 || l2 || modulo) {
     if (typeof current.val === 'number') {
