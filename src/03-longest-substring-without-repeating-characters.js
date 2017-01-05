@@ -20,5 +20,26 @@
  * };
  */
 
-module.exports = function(s) {
+module.exports = function(str) {
+  var hash = {};
+  var len = 0;
+  var maxLen = 0;
+  var lastCharIndex = 0;
+
+  str.split('').forEach((char, i) => {
+    if (hash[char]) {
+      len = 0;
+    }
+
+    hash[char] = true;
+    len++;
+
+    if (len > maxLen) {
+      lastCharIndex = i;
+      maxLen = len;
+    }
+  })
+
+  lastCharIndex++;
+  return str.slice(lastCharIndex - maxLen, lastCharIndex);
 }
