@@ -26,7 +26,7 @@ module.exports = function(str) {
   var maxLen = 0;
   var lastCharIndex = 0;
 
-  str.split('').forEach((char, i) => {
+  str.split('').forEach(function(char, i) {
     if (hash[char]) {
       len = 0;
     }
@@ -38,7 +38,7 @@ module.exports = function(str) {
       lastCharIndex = i;
       maxLen = len;
     }
-  })
+  });
 
   lastCharIndex++;
   return str.slice(lastCharIndex - maxLen, lastCharIndex);
