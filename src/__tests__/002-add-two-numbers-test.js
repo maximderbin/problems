@@ -1,7 +1,7 @@
 var ListNode = require('../utils/ListNode');
-var problem = require('../02-add-two-numbers');
+var problem = require('../002-add-two-numbers');
 
-describe('02-add-two-numbers', function() {
+describe('002-add-two-numbers', function() {
   it('when the lists are the same length', function() {
     var p = new ListNode(2);
     p.next = new ListNode(4);

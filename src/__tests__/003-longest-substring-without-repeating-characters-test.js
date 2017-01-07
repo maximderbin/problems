@@ -1,6 +1,6 @@
-var problem = require('../03-longest-substring-without-repeating-characters');
+var problem = require('../003-longest-substring-without-repeating-characters');
 
-describe('03-longest-substring-without-repeating-characters', function() {
+describe('003-longest-substring-without-repeating-characters', function() {
   it('works', function() {
     expect(problem('abcabcbb')).toEqual('abc');
     expect(problem('bbbbb')).toEqual('b');
