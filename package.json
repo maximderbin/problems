@@ -6,8 +6,7 @@
   "scripts": {
     "test": "./node_modules/.bin/jest"
   },
-  "jest": {
-  },
+  "jest": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maximderbin/problems.git"
@@ -19,6 +18,7 @@
   },
   "homepage": "https://github.com/maximderbin/problems#readme",
   "devDependencies": {
+    "eslint": "^3.13.0",
     "jest": "^17.0.2"
   }
 }

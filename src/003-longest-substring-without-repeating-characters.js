@@ -20,26 +20,19 @@
  * };
  */
 
-module.exports = function(str) {
+module.exports = function lengthOfLongestSubstring(str) {
   var hash = {};
-  var len = 0;
+  var left = 0;
   var maxLen = 0;
-  var lastCharIndex = 0;
 
   str.split('').forEach(function(char, i) {
     if (hash[char]) {
-      len = 0;
+      left = Math.max(hash[char], left);
     }
 
-    hash[char] = true;
-    len++;
-
-    if (len > maxLen) {
-      lastCharIndex = i;
-      maxLen = len;
-    }
+    hash[char] = i + 1;
+    maxLen = Math.max(maxLen, i + 1 - left);
   });
 
-  lastCharIndex++;
-  return str.slice(lastCharIndex - maxLen, lastCharIndex);
-}
+  return maxLen;
+};
