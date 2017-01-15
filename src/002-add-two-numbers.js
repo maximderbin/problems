@@ -47,4 +47,4 @@ module.exports = function(l1, l2) {
   }
 
   return head;
-}
+};

@@ -34,4 +34,4 @@ module.exports = function(nums, target) {
   }
 
   return result;
-}
+};

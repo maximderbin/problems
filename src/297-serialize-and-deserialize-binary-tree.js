@@ -124,4 +124,4 @@ var deserialize = function(data) {
 module.exports = {
   serialize: serialize,
   deserialize: deserialize,
-}
+};

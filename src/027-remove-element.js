@@ -36,4 +36,4 @@ module.exports = function(nums, val) {
 
   nums.length = id;
   return nums.length;
-}
+};

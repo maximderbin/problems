@@ -35,4 +35,4 @@ module.exports = function(nums) {
   }
 
   nums.length = i;
-}
+};

@@ -36,4 +36,4 @@ module.exports = function(nums1, m, nums2, n) {
   while(j >= 0) {
     nums1[k--] = nums2[j--];
   }
-}
+};
