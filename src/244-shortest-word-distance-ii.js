@@ -36,7 +36,17 @@
  * var param_1 = obj.shortest(word1,word2)
  */
 var WordDistance = function(words) {
-  this.words = words;
+  this.words = {};
+
+  for(var i = 0; i < words.length; i++) {
+    word = words[i];
+
+    if(this.words[word]) {
+      this.words[word].push(i);
+    } else {
+      this.words[word] = [i];
+    }
+  }
 };
 
 WordDistance.createNew = function(words) {
@@ -44,15 +54,24 @@ WordDistance.createNew = function(words) {
 };
 
 WordDistance.prototype.shortest = function(word1, word2) {
-  var word1idx = [];
-  var word2idx = [];
+  var list1 = this.words[word1];
+  var list2 = this.words[word2];
+  var minDistance = Infinity;
 
-  for (var i = 0; i < this.words.length; i++) {
-    if (this.words[i] === word1) { word1idx.push(i) }
-    if (this.words[i] === word2) { word2idx.push(i) }
+  for (var i = 0, j = 0; i < list1.length && j < list2.length;) {
+    var index1 = list1[i];
+    var index2 = list2[j];
+
+    if(index1 < index2) {
+      minDistance = Math.min(minDistance, index2 - index1);
+      i++;
+    } else {
+      minDistance = Math.min(minDistance, index1 - index2);
+      j++;
+    }
   }
 
-  return Math.abs(word1idx[word1idx.length - 1] - word2idx[0]);
+  return minDistance;
 };
 
 module.exports = WordDistance;
