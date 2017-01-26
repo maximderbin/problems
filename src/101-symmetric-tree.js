@@ -37,30 +37,11 @@
  */
 
 module.exports = function(root) {
-  if (root === null) { return true }
-
-  var queue = [];
-  var result = true;
-
-  queue.push(root.left);
-  queue.push(root.right);
-
-  while (queue.length) {
-    var left = queue.shift();
-    var right = queue.shift();
-
-    if (
-      (left.left && left.left.val) === (right.right && right.right.val) ||
-      (left.right && left.right.val) === (right.left && right.left.val)
-    ) {
-      left.left && queue.push(left.left);
-      right.right && queue.push(right.right);
-      left.right && queue.push(left.right);
-      right.left && queue.push(right.left);
-    } else {
-      result = false;
-    }
+  function recur(left, right) {
+    if (left === null || right === null) { return left === right }
+    if (left.val !== right.val) { return false }
+    return recur(left.left, right.right) && recur(left.right, right.left);
   }
 
-  return result;
+  return root === null || recur(root.left, root.right);
 };
