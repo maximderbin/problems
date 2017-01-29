@@ -7,6 +7,49 @@
  * fib(6) // => 8
  */
 
-module.exports = function fib(n) {
-  return n <= 2 ? 1 : fib(n - 1) + fib(n - 2);
+function fibNaive(n) {
+  return n <= 2 ? 1 : fibNaive(n - 1) + fibNaive(n - 2);
+};
+
+memo = {};
+function fibDP(n) {
+  var result;
+
+  if (memo[n]) {
+    return memo[n];
+  } else if (n <= 2) {
+    result = 1;
+  } else {
+    result = fibDP(n - 1) + fibDP(n - 2)
+  }
+
+  memo[n] = result;
+
+  return result;
+};
+
+function fibDPBottomUp(n) {
+  var fib = {};
+  var range = new Array(n);
+
+  for (var i = 0; i < range.length; i++) {
+    var k = i + 1;
+    var result;
+
+    if (k <= 2) {
+      result = 1;
+    } else {
+      result = fib[k - 1] + fib[k - 2];
+    }
+
+    fib[k] = result;
+  }
+
+  return fib[n];
+}
+
+module.exports = {
+  fibNaive: fibNaive,
+  fibDP: fibDP,
+  fibDPBottomUp: fibDPBottomUp
 };
