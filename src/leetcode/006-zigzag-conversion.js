@@ -15,9 +15,9 @@
  * convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
  *
  *
- *  @param {string} s
- *  @param {number} numRows
- *  @return {string}
+ * @param {string} s
+ * @param {number} numRows
+ * @return {string}
  *
  * var convert = function(s, numRows) {
  *

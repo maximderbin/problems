@@ -21,4 +21,3 @@ describe('006-zigzag-conversion', function() {
     );
   });
 });
-
