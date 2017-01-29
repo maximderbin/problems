@@ -41,4 +41,3 @@ module.exports = function convert(s, rows) {
     return arr.concat(row);
   }, []).join('');
 };
-
