@@ -4,7 +4,7 @@ var problem = require('../104-maximum-depth-of-binary-tree');
 describe('104-maximum-depth-of-binary-tree', function() {
   it('works for {1,2,3,4,5}', function() {
     var root = new TreeNode(1);
-    root.left = new TreeNode(2)
+    root.left = new TreeNode(2);
     root.right = new TreeNode(3);
     root.left.left = new TreeNode(4);
     root.left.right = new TreeNode(5);

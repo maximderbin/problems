@@ -47,7 +47,7 @@ var TwoSumFastWrite = function() {
 
 TwoSumFastWrite.createNew = function() {
   return new TwoSumFastWrite();
-}
+};
 
 TwoSumFastWrite.prototype.add = function(number) {
   this.nums[number] = this.nums[number] ? this.nums[number] + 1 : 1;
@@ -81,7 +81,7 @@ var TwoSumFastRead = function() {
 
 TwoSumFastRead.createNew = function() {
   return new TwoSumFastRead();
-}
+};
 
 TwoSumFastRead.prototype.add = function(number) {
   if(this.nums[number]) {

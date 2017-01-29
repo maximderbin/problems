@@ -39,7 +39,7 @@ var WordDistance = function(words) {
   this.words = {};
 
   for(var i = 0; i < words.length; i++) {
-    word = words[i];
+    var word = words[i];
 
     if(this.words[word]) {
       this.words[word].push(i);

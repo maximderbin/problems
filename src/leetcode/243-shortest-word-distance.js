@@ -28,7 +28,6 @@ module.exports = function(words, word1, word2) {
   var i1 = -1;
   var i2 = -1;
   var minDistance = words.length;
-  var currentDistance;
 
   for (var i = 0; i < words.length; i++) {
     if (words[i] === word1) {

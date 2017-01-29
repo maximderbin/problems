@@ -48,7 +48,7 @@
 
 module.exports = function depthSum(nestedList) {
   function recur(list, depth) {
-    var depth = depth || 0;
+    depth = depth || 0;
     var sum = 0;
 
     depth++;

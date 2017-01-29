@@ -44,11 +44,11 @@
 
 module.exports = function(root) {
   function recur(node, result) {
-    if (node === null) { return -1 }
+    if (node === null) { return -1; }
 
     var level = 1 + Math.max(recur(node.left, result), recur(node.right, result));
 
-    if (result.length < level + 1) { result.push([]) }
+    if (result.length < level + 1) { result.push([]); }
 
     result[level].push(node.val);
 

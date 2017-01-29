@@ -1,6 +1,6 @@
 var problemClasses = require('../170-two-sum-iii-data-structure-design');
-var TwoSumFastWrite = problemClasses.TwoSumFastWrite;
-var TwoSumFastRead = problemClasses.TwoSumFastRead;
+// var TwoSumFastWrite = problemClasses.TwoSumFastWrite;
+// var TwoSumFastRead = problemClasses.TwoSumFastRead;
 
 describe('170-two-sum-iii-data-structure-design', function() {
   Object.keys(problemClasses).forEach(function(className) {

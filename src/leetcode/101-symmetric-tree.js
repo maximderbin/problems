@@ -38,8 +38,8 @@
 
 module.exports = function(root) {
   function recur(left, right) {
-    if (left === null || right === null) { return left === right }
-    if (left.val !== right.val) { return false }
+    if (left === null || right === null) { return left === right; }
+    if (left.val !== right.val) { return false; }
     return recur(left.left, right.right) && recur(left.right, right.left);
   }
 
