@@ -30,10 +30,8 @@ function fibDP(n) {
 
 function fibDPBottomUp(n) {
   var fib = {};
-  var range = new Array(n);
 
-  for (var i = 0; i < range.length; i++) {
-    var k = i + 1;
+  for (var k = 1; k <= n; k++) {
     var result;
 
     if (k <= 2) {
