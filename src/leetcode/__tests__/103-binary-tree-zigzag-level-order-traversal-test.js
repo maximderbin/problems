@@ -1,7 +1,7 @@
 var TreeNode = require('../utils/TreeNode');
-var problem = require('../102-binary-tree-level-order-traversal');
+var problem = require('../103-binary-tree-zigzag-level-order-traversal');
 
-describe('102-binary-tree-level-order-traversal', function() {
+describe('103-binary-tree-zigzag-level-order-traversal', function() {
   it('works', function() {
     var root = new TreeNode(3);
     root.left = new TreeNode(9);
@@ -11,7 +11,7 @@ describe('102-binary-tree-level-order-traversal', function() {
 
     var result = [
       [3],
-      [9, 20],
+      [20, 9],
       [15, 7]
     ];
 
