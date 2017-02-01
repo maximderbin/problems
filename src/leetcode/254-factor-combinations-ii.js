@@ -51,24 +51,17 @@
  */
 
 module.exports = function(n) {
-  function recur(result, item, n, start) {
-    if (n <= 1) {
-      if (item.length > 1) {
-        result.push([].concat(item)); // ^_^
+  function recur(n, i, item, result) {
+    while (i * i <= n) {
+      if (n % i === 0) {
+        result.push(item.concat([i, n/i]));
+        recur(n/i, i, item.concat([i]), result);
       }
-      return result;
-    }
-
-    for (var i = start; i <= n; i++) {
-      if (n % i == 0) {
-        item.push(i);
-        recur(result, item, n / i, i);
-        item.pop();
-      }
+      i += 1;
     }
 
     return result;
   }
 
-  return recur([], [], n, 2);
+  return recur(n, 2, [], []);
 };
