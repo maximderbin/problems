@@ -1,5 +1,5 @@
 /*
- * https://leetcode.com/problems/powx-n://leetcode.com/problems/powx-n/
+ * https://leetcode.com/problems/powx-n/
  *
  * 50. Pow(x, n)
  *
@@ -14,16 +14,15 @@
  * };
  */
 
-module.exports = function(x, n) {
+module.exports = function myPow(x, n) {
   if (n === 0) { return 1; }
-  if (n < 0) { n = -n; x = 1 / x; }
 
-  var result = 1;
-
-  while (n > 0) {
-    result *= x;
-    --n;
+  if (n < 0) {
+    n = -n;
+    x = 1 / x;
   }
 
-  return +result.toFixed(5);
+  return n % 2 === 0
+    ? myPow(x * x, parseInt(n / 2))
+    : x * myPow(x * x, parseInt(n / 2));
 };
