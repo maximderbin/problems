@@ -37,4 +37,20 @@ describe('311-sparse-matrix-multiplication', function() {
 
     expect(problem(A, B)).toEqual(result);
   });
+
+  it('works for testcase 3', function() {
+    var A = [
+      [0]
+    ];
+
+    var B = [
+      [0]
+    ];
+
+    var result = [
+      [0]
+    ];
+
+    expect(problem(A, B)).toEqual(result);
+  });
 });
